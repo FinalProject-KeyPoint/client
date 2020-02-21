@@ -10,9 +10,9 @@ export default function NewDemo(props) {
 
 
     return (
-        <div className="w-75 mx-auto mb-4" style={{ backgroundColor: 'white', padding: 10 }}>
+        <div className="w-75 mx-auto mb-4" style={{ backgroundColor: 'white', padding: 10, }}>
             Demo
-            <Tabs defaultActiveKey="2" tabPosition='left' style={{ height: '80vh', display: 'flex', alignItems: 'center' }} tabBarStyle={{ display: 'flex', alignItems: 'center', height: '15%' }}>
+            <Tabs defaultActiveKey="1" tabPosition='left' style={{ height: '80vh', display: 'flex', alignItems: 'center', marginLeft: -30 }} tabBarStyle={{ display: 'flex', alignItems: 'center', height: 90 }}>
                 <TabPane
                     tab={<span><Icon type="android" />Preset</span>}
                     key="1"

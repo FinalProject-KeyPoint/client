@@ -7,13 +7,13 @@ export default function LandingPage(props) {
 
 
     return (
-        <div style={{ backgroundColor: '#e8e8e8' }} >
+        <div style={{ backgroundColor: '#e8e8e8', overflowX: 'hidden' }} >
             <Navbar />
             <div style={{ backgroundImage: `url("${backImage}")`, height: 600, width: '100vw', zIndex: -10 }} >
                 {/* <Image src={backImage} style={{ height: 400, width: '100vw', zIndex: -10, opacity: 1 }} /> */}
             </div>
-            <div >
-                <div style={{ zIndex: 10, opacity: 1 }}>
+            <div style={{ paddingBottom: 20 }}>
+                <div style={{ zIndex: 10, opacity: 1, }}>
                     <div className="w-75 mx-auto mb-4" style={{ backgroundColor: 'white', height: 365, marginTop: -100, padding: 20 }} >
                         ters
                     </div>
@@ -23,6 +23,9 @@ export default function LandingPage(props) {
                     </div>
                     {/* <DemoPage /> */}
                 </div>
+            </div>
+            <div style={{ height: 35, backgroundColor: 'black' }} >
+
             </div>
         </div>
     )
