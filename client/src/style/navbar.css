@@ -1,0 +1,17 @@
+.navbar{
+    background-color: aliceblue;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.right-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin-right: 30px;
+}
