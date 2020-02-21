@@ -1,0 +1,8 @@
+.duplicate{
+    background-color: #fce538;
+}
+
+.overflowScroll{
+    overflow-y: auto;
+    height: 80vh;
+}
