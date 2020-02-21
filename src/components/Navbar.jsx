@@ -5,9 +5,15 @@ export default function Navbar(props) {
 
 
     return (
-        <div style={{ width: '100vw', height: 50, backgroundColor: 'white', textAlign: 'right', display: 'flex', justifyContent: 'flex-start', alignItems: 'center' }} >
-            <div style={{ margin: 10, display: 'flex', justifyContent: 'flex-start' }} >
-                <p>KeyPoint</p>
+        <div style={{ width: "100vw" }} >
+            <div style={{ width: '100vw', height: 50, backgroundColor: 'white', textAlign: 'right', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >
+                <div style={{ margin: 20 }} >
+                    KeyPoint
+                </div>
+                <div style={{ margin: 20 }} >
+                    Chrome Extension |
+                     Login
+                </div>
             </div>
         </div>
     )

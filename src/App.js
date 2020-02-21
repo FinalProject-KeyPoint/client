@@ -1,5 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import LandingPage from './containers/LandingPage';
 
@@ -25,7 +26,7 @@ function App() {
   //     <LandingPage className="Landing-page" />
   //   </div>
   // );
-  return <LandingPage classname="landing-page" />
+  return <LandingPage className="landing-page" />
 }
 
 export default App;
