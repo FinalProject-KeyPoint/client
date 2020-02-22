@@ -27,7 +27,7 @@ export default function Main(props) {
                 </div>
             </div>
             <Meet />
-            <div style={{ width: '100vw', height: 30, backgroundColor: 'black' }} >
+            <div style={{ width: '100%', height: 30, backgroundColor: 'black' }} >
 
             </div>
         </>

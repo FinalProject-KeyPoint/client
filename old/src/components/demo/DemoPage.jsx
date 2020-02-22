@@ -11,7 +11,7 @@ export default function DemoPage(props) {
 
 
     return (
-        <div style={{ height: '80vh', width: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: -20 }} >
+        <div style={{ height: '80vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft: -20 }} >
             <Tabs defaultActiveKey="1" tabPosition='left' style={{ height: '80vh', display: 'flex', alignItems: 'center' }} tabBarStyle={{ display: 'flex', alignItems: 'center', height: '15%' }}>
                 <TabPane
                     tab={<span><Icon type="android" />Preset</span>}

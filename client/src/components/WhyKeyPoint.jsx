@@ -5,9 +5,9 @@ export default function Why(props) {
 
     return (
         <div className="box" >
-            <div className="insideBox">
+            {/* <div className="insideBox">
                 <h4>Why KeyPoint?</h4>
-            </div>
+            </div> */}
             <div className="container my-auto" >
                 <div className="bigMargin" >
                     <div className="goMargin">

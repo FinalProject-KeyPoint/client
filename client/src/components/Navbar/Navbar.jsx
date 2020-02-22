@@ -1,18 +1,36 @@
 import React from 'react';
 import '../../style/navbar.css'
-
+import { Popover, Button, Icon } from 'antd';
+import TelegramIcon from '@material-ui/icons/Telegram';
 
 export default function Navbar(props) {
 
+    const scroller = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+        // window.scroll(0, 600)
+    }
+
+
 
     return (
-        <div className="navbar my-auto" >
+        <div className="navbar" >
             <div style={{ marginLeft: 25 }} >
-                <p>KeyPoint</p>
+                <Button type='link' className="btnNav" onClick={scroller} > KeyPoint </Button>
             </div>
             <div className="right-bar" >
-                <p>Extension</p>
-                <p>Login</p>
+                <Popover className="popNav" trigger="click" placement="bottomRight" content={
+                    <div className="navPopContent" style={{ width: 300, display: 'flex', justifyContent: 'space-between' }} >
+                        <span><Icon type="chrome" /> &nbsp;Chrome</span>
+                        <span><i class="fa fa-firefox"></i> Firefox</span>
+                        <span><TelegramIcon>telegram</TelegramIcon>Telegram</span>
+                    </div>
+                }>
+                    <Button type='link' className="btnNav" > Find Us </Button>
+                </Popover>
+                <Button type='link' className="btnNav" > Login </Button>
             </div>
         </div>
     )
