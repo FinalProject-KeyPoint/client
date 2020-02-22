@@ -12,7 +12,7 @@ export default function Main(props) {
             <Navbar />
             <div className="induk" >
                 <div style={{ padding: 100, height: '60%', zIndex: -10, }}>
-                    <div style={{ width: '100%', height: '40vh', backgroundColor: 'rgb(256,256,256,0.5)', marginBottom: -150 }}>
+                    <div style={{ width: '100%', height: '40vh', backgroundColor: 'rgb(256,256,256)', marginTop: 230, borderRadius: 30, padding: 15 }}>
                         <p>Test ride</p>
                     </div>
                 </div>
