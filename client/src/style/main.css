@@ -27,3 +27,22 @@
   z-index: -1;
   background-size: cover;
 }
+
+.topDiv {
+   width: 100vw;
+   z-index: 100;
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   top: 180px;
+}
+
+.handleDemo {
+   margin-top: 50px;
+   margin-bottom: 50px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   width: 60vw;
+   height: 555px 
+}

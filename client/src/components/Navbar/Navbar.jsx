@@ -6,7 +6,7 @@ export default function Navbar(props) {
 
 
     return (
-        <div className="navbar" >
+        <div className="navbar my-auto" >
             <div style={{ marginLeft: 25 }} >
                 <p>KeyPoint</p>
             </div>

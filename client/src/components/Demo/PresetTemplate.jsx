@@ -5,13 +5,14 @@ import Cnbc from '../../assets/web/cnbc.png';
 import Cnn from '../../assets/web/cnn.png';
 import Kompas from '../../assets/web/kompas.png';
 import Tribun from '../../assets/web/tribunnews_v2.png';
+import '../../style/presetTemplate.css'
 
 
 export default function PresetTemplate(props) {
 
 
     return (
-        <div style={{ width: '10vw', borderColor: 'black', padding: 10, height: 500, overflowY: 'auto', borderRadius: 7, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }} >
+        <div className="boxCon">
             {
                 dataFake.map((data, i) => <PresetCard key={i} data={data} />)
             }
