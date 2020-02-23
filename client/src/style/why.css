@@ -2,7 +2,7 @@
     width: 100%;
     height: 40vh;
     background-color: rgb(256, 256, 256);
-    margin-top: 230px;
+    margin-top: 190px;
     border-radius: 30px;
     padding: 15px;
     display: flex;
@@ -20,6 +20,7 @@
     height: 60%;
     display: flex;
     flex-flow: row wrap;
+    margin-top: 30px;
     /* justify-content: space-around;
     align-items: center;  */
 }
@@ -42,4 +43,12 @@
     justify-content: center;
     position: absolute;
     margin-top: -9px;
+}
+
+/* patokan di 770, 550, 360 */
+
+@media (min-width: 550px) { 
+    .insideBox {
+        display: none;
+    }
 }

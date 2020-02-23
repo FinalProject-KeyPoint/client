@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import DemoHandle from '../components/Demo/DemoHandle';
-import KeyPoint from '../assets/keypoint.png'
+// import KeyPoint from '../assets/keypoint.png'
 import Why from '../components/WhyKeyPoint';
 import Meet from '../components/About/Meet';
 
@@ -12,9 +12,9 @@ export default function Main(props) {
 
     return (
         <>
-            <div className="topDiv" >
+            {/* <div className="topDiv" >
                 <img src={KeyPoint} alt="" style={{ backgroundColor: 'rgb(235, 235, 235, 0.04)', borderRadius: 15 }} />
-            </div>
+            </div> */}
             <Navbar />
             <div className="induk" >
                 <div style={{ height: '60%', zIndex: -10, padding: 100 }}>
