@@ -6,6 +6,7 @@ import Cnn from '../../assets/web/cnn.png';
 import Kompas from '../../assets/web/kompas.png';
 import Tribun from '../../assets/web/tribunnews_v2.png';
 import '../../style/presetTemplate.css'
+// import '../../style/Tab1.css'
 
 
 export default function PresetTemplate(props) {

@@ -5,28 +5,28 @@ export default function Why(props) {
 
     return (
         <div className="box" >
-            {/* <div className="insideBox">
+            <div className="insideBox">
                 <h4>Why KeyPoint?</h4>
-            </div> */}
+            </div>
             <div className="container my-auto" >
                 <div className="bigMargin" >
                     <div className="goMargin">
                         <h6 className="textCenter" >Summarize</h6>
-                        <p className="textCenter" >Get the point of article that you read</p>
+                        <p className="textCenter textHilang" >Get the point of article that you read</p>
                     </div>
                     <div className="goMargin">
                         <h6 className="textCenter" >Remove duplicate</h6>
-                        <p className="textCenter" >No more to duplicate paragraph content</p>
+                        <p className="textCenter textHilang" >No more to duplicate paragraph content</p>
                     </div>
                 </div>
                 <div className="bigMargin" >
                     <div className="goMargin">
                         <h6 className="textCenter" >Chrome extension</h6>
-                        <p className="textCenter" >Use KeyPoint directly on the site</p>
+                        <p className="textCenter textHilang" >Use KeyPoint directly on the site</p>
                     </div>
                     <div className="goMargin">
                         <h6 className="textCenter" >Reading History</h6>
-                        <p className="textCenter" >Let us remember what you read back then</p>
+                        <p className="textCenter textHilang" >Let us remember what you read back then</p>
                     </div>
                 </div>
             </div>

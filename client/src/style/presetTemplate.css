@@ -1,14 +1,16 @@
 .boxCon { 
-    width: 10vw;
+    /* width: 10vw; */
     border-color: black;
-    padding: 10px;
-    height: 500px;
+    /* padding-top: 26px; */
+    height: 480px;
     overflow-y: auto;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly
+    /* justify-content: space-evenly; */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .cardTemplate {

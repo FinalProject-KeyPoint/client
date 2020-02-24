@@ -3,7 +3,7 @@ import TabTextArea from '../TabTextArea'
 import { Input } from '@material-ui/core';
 import { Button, Icon } from 'antd';
 import KeyButton from './keybutton';
-
+import '../../style/Tab1.css'
 
 
 
@@ -12,16 +12,16 @@ export default function Tab2(props) {
 
 
     return (
-        <div style={{ width: '60vw', minHeight: 450, backgroundColor: 'white', padding: 10 }} >
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', marginBottom: 10 }} >
-                <Input placeholder="Put your url here" className="w-75" allowClear />
+        <div className="tabTwo" >
+            <div className="tabTwoDivSatu" >
+                <Input placeholder="Put your url here" className="w-75" />
                 <Button type="primary" ghost style={{ display: 'flex', alignItems: 'center', marginLeft: 10 }}>Filter<Icon type="double-right" /></Button>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }} >
-                <TabTextArea style={{ width: '27vw' }} placeholder="(っ◔◡◔)っ  Put url up there and then click filter ;)" />
-                <div>
+            <div className="tabTowDivTwo tabDua" >
+                <TabTextArea style={{ width: '27vw', height: 450 }} minHeight={250} placeholder="(っ◔◡◔)っ  Put url up there and then click filter ;)" />
+                <div className="tabTwoHandle dalamtabDua" >
                     <KeyButton keypoint={cobaPopUp} />
-                    <TabTextArea style={{ width: '27vw' }} minHeight={350} placeholder="The result will shown here ヽ(´▽｀)" />
+                    <TabTextArea style={{ width: '27vw', height: 413 }} minHeight={220} placeholder="The result will shown here ヽ(´▽｀)" />
                 </div>
             </div>
         </div>

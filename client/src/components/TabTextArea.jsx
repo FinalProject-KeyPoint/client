@@ -11,7 +11,7 @@ export default function TabTextArea(props) {
                 as="textarea"
                 placeholder={props.placeholder}
                 // placeholder="(っ◔◡◔)っ  Put url up there and then click filter ;)"
-                className="mx-1"
+                className="mx-1 aturTextArea"
                 readOnly={true}
                 style={{
                     flex: 2,
@@ -22,6 +22,7 @@ export default function TabTextArea(props) {
                     minHeight: props.minHeight,
                     height: '100%',
                     padding: 15,
+                    fontSize: '0.8em',
                 }}
             /> {/* outline on focus */}
         </div>
