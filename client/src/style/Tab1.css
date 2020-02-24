@@ -1,0 +1,124 @@
+.tabOne { 
+    width: 60vw;
+    min-height: 450px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around 
+}
+/* batas tab 2 */
+
+.tabTwo{
+    width: 60vw;
+    min-height: 500px;
+    background-color: white;
+    padding: 10px;
+}
+.tabTwoDivSatu { 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 10px
+}
+.tabTowDivTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+.tabTwoHandle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 885px) {
+    .moveup {
+        margin-top: -3px !important;
+        width: 95% !important;
+    }
+    .tabOne, .tabTowDivTwo {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 70%;
+    }
+    .tabTowDivTwo textarea {
+        width: 200%;
+        margin: 0;
+        height: 25% !important;
+    }
+    .tabTwoHandle {
+        width: 99%;
+        margin-top: 5px;
+        align-items: flex-start;
+    }
+    .tabTowDivTwo button {
+        width: 95%;
+    }
+    .tabDua div {
+        height: 150px !important;
+        margin-bottom: 100px;
+    }
+    .dalamtabDua textarea {
+        height: 100% !important;
+    }
+    .boxCon {
+        width: 100%;
+        height: 130px;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: auto !important;
+        margin-top: -10px;
+    }
+    .cardTemplate {
+        width: 70px !important;
+    }
+    .tabOne textarea:first-child, .tabOne textarea:last-child  {
+        height: 220px !important;
+        width: 55vw !important;
+        margin-left: -2px !important;
+    }
+    .handleDemo {
+        height: 600px !important;
+    }
+}
+
+
+@media (max-width: 680px) {
+    .moveup {
+        margin-bottom: -80px !important;
+    }
+    .tabOne:nth-child(2) {
+        height: 300px !important;
+    }
+    .moveup:last-child {
+        min-height: 280px !important;
+        /* height: 30% !important; */
+    }
+    .boxCon {
+        flex-direction: row;
+        /* flex-flow: row nowrap; */
+        height: 150px;
+        width: 100%;
+        overflow: scroll !important;
+    }
+    .cardTemplate {
+        margin: 0 !important;
+    }
+    .handleDemo {
+        height: 600px !important;
+    }
+    .tabOne textarea:first-child {
+        height: 150px !important;
+    }
+    .tabOne textarea:last-child  {
+        height: 170px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .tabTwoHandle textarea {
+        margin-left: auto !important;
+    }
+}

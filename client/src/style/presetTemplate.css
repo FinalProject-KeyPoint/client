@@ -1,0 +1,27 @@
+.boxCon { 
+    /* width: 10vw; */
+    border-color: black;
+    /* padding-top: 26px; */
+    height: 480px;
+    overflow-y: auto;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cardTemplate {
+    width: 9vw;
+    height: 50px;
+    margin: 15px;
+    cursor: pointer
+}
+
+.cardTemplate img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
