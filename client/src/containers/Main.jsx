@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { useRef } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import DemoHandle from '../components/Demo/DemoHandle';
 // import KeyPoint from '../assets/keypoint.png'
@@ -8,7 +8,7 @@ import Meet from '../components/About/Meet';
 import '../style/main.css'
 
 export default function Main(props) {
-    const ref = createRef()
+    const ref = useRef()
     const handleClick = () => {
         ref.current.scrollIntoView({
             behavior: 'smooth',
@@ -30,12 +30,13 @@ export default function Main(props) {
             </div>
             <div className="home" ref={ref} >
                 <div className="handleDemo" >
-                    <DemoHandle />
+                    {/* <DemoHandle /> */}
                 </div>
             </div>
             <Meet />
-            <div style={{ width: '100%', height: 30, backgroundColor: 'black' }} >
-
+            <div style={{ width: '100%', height: 30, backgroundColor: 'black', textAlign: 'center' }} >
+                <span style={{ color: 'white', textAlign: 'center' }} >&copy; 2020 Keypoint </span> &nbsp;&nbsp;&nbsp;
+                <span style={{ color: 'white', textAlign: 'center' }} > <i className="fa fa-github"></i> Github Link</span>
             </div>
         </>
     )
