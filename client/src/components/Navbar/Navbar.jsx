@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../style/navbar.css'
-import { Popover, Button, Icon } from 'antd';
+import { Popover, Button } from 'antd';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import KeyPoint from '../../assets/keypoint_tpr.png'
 
@@ -25,7 +25,6 @@ export default function Navbar(props) {
             <div className="right-bar" >
                 <Popover className="popNav" trigger="click" placement="bottomRight" content={
                     <div className="navPopContent" style={{ width: 300, display: 'flex', justifyContent: 'space-between' }} >
-                        <span><Icon type="chrome" /> &nbsp;Chrome</span> |
                         <span><i className="fa fa-firefox"></i> Firefox</span> |
                         <span><TelegramIcon>telegram</TelegramIcon>Telegram</span>
                     </div>

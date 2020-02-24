@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import Navbar from '../components/Navbar/Navbar';
-import DemoHandle from '../components/Demo/DemoHandle';
+// import DemoHandle from '../components/Demo/DemoHandle';
 // import KeyPoint from '../assets/keypoint.png'
 import Why from '../components/WhyKeyPoint';
 import Meet from '../components/About/Meet';
+import DemoPreset from '../components/Preset/DemoPreset';
 
 import '../style/main.css'
 
@@ -12,7 +13,7 @@ export default function Main(props) {
     const handleClick = () => {
         ref.current.scrollIntoView({
             behavior: 'smooth',
-            block: 'start',
+            block: 'center',
         });
         console.log(ref.current.offsetTop, 'ini');
     }
@@ -29,8 +30,11 @@ export default function Main(props) {
                 </div>
             </div>
             <div className="home" ref={ref} >
-                <div className="handleDemo" >
-                    {/* <DemoHandle /> */}
+                {/* <div className="handleDemo" >
+                    <DemoHandle />
+                </div> */}
+                <div className="presetDiv" >
+                    <DemoPreset />
                 </div>
             </div>
             <Meet />
