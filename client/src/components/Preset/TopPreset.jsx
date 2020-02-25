@@ -1,4 +1,6 @@
 import React from 'react';
+import { Image, Button } from 'react-bootstrap'
+
 import Detik from '../../assets/web/detik.png';
 import Cnn from '../../assets/web/cnn.png';
 import Kompas from '../../assets/web/kompas.png';
@@ -6,7 +8,7 @@ import Tribun from '../../assets/web/tribunnews_v2.png';
 import Liputan from '../../assets/web/liputan6.png';
 import Okezone from '../../assets/web/okezone.webp';
 import Tempo from '../../assets/web/tempo.png';
-import { Image } from 'react-bootstrap'
+// import { Radio } from 'antd';
 import '../../style/demoPreset.css';
 
 export default function TopPreset(props) {
@@ -14,27 +16,55 @@ export default function TopPreset(props) {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'space-around' }} >
-            <div style={{ width: 100, height: 50 }} >
+            <Button
+                variant="outline-dark" className={props.active === 'Cnn' ? "active" : null}
+                style={{ width: 130, height: 100 }}
+                onClick={() => props.setActive('Cnn')}
+            >
                 <Image src={Cnn} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50, marginTop: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Detik' ? "active" : null}
+                style={{ width: 130, height: 100, marginTop: 50 }}
+                onClick={() => props.setActive('Detik')}
+            >
                 <Image src={Detik} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Kompas' ? "active" : null}
+                style={{ width: 130, height: 100 }}
+                onClick={() => props.setActive('Kompas')}
+            >
                 <Image src={Kompas} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50, marginTop: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Liputan' ? "active" : null}
+                style={{ width: 130, height: 100, marginTop: 50 }}
+                onClick={() => props.setActive("Liputan")}
+            >
                 <Image src={Liputan} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Okezone' ? "active" : null}
+                style={{ width: 130, height: 100 }}
+                onClick={() => props.setActive('Okezone')}
+            >
                 <Image src={Okezone} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50, marginTop: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Tempo' ? "active" : null}
+                style={{ width: 130, height: 100, marginTop: 50 }}
+                onClick={() => props.setActive("Tempo")}
+            >
                 <Image src={Tempo} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
-            <div style={{ width: 100, height: 50 }} >
+            </Button>
+            <Button
+                variant="outline-dark" className={props.active === 'Tribun' ? "active" : null}
+                style={{ width: 130, height: 100 }}
+                onClick={() => props.setActive('Tribun')}
+            >
                 <Image src={Tribun} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-            </div>
+            </Button>
         </div>
     )
 }
