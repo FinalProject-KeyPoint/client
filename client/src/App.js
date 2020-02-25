@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,19 +12,22 @@ import Navbar from './components/Navbar/Navbar'
 import Main from './containers/Main';
 import Dashboard from './containers/Dashboard'
 import Landing from './containers/Landing'
+import NotificationBox from './components/NotificationBox'
 
-function App() {
+function App() {  
+
   return (
     <Provider store={store}>
       <Router>
         <Navbar />
+        <NotificationBox />
         <Switch>
           <PrivateRoute path="/dashboard">
             <Dashboard />
           </PrivateRoute>
-          <PrivateRoute path="/register">
+          <Route path="/register">
             <Landing />
-          </PrivateRoute>
+          </Route>
           <Route path="/">
             <Main />
           </Route>

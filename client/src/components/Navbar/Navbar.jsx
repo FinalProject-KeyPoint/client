@@ -20,6 +20,8 @@ export default function Navbar(props) {
     //     // window.scroll(0, 600)
     // }
 
+    console.log(isLoggedIn)
+
     const logout = () => {
         dispatch({
             type: LOGOUT
@@ -30,7 +32,9 @@ export default function Navbar(props) {
         <div className="navbar" >
             <div className="logoNav" >
                 {/* <Button type='link' className="btnNav" onClick={scroller} > KeyPoint </Button> */}
-                <img src={KeyPoint} onClick={props.handleClick} alt="" />
+                <Link to={'/'}>
+                    <img src={KeyPoint} onClick={props.handleClick} alt="" />
+                </Link>
             </div>
             <div className="right-bar" >
                 <Link to={'/dashboard'}>
