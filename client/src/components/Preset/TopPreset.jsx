@@ -17,49 +17,49 @@ export default function TopPreset(props) {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-around' }} >
             <Button
-                variant="outline-dark" className={props.active === 'Cnn' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Cnn' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
                 onClick={() => props.setActive('Cnn')}
             >
                 <Image src={Cnn} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Detik' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Detik' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
                 onClick={() => props.setActive('Detik')}
             >
                 <Image src={Detik} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Kompas' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Kompas' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
                 onClick={() => props.setActive('Kompas')}
             >
                 <Image src={Kompas} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Liputan' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Liputan' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
                 onClick={() => props.setActive("Liputan")}
             >
                 <Image src={Liputan} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Okezone' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Okezone' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
                 onClick={() => props.setActive('Okezone')}
             >
                 <Image src={Okezone} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Tempo' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Tempo' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
                 onClick={() => props.setActive("Tempo")}
             >
                 <Image src={Tempo} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Tribun' ? "active" : null}
+                variant="outline-dark" className={props.active === 'Tribun' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
                 onClick={() => props.setActive('Tribun')}
             >
