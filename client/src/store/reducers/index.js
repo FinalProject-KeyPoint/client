@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import users from './users'
-import history from './history'
+import articles from './articles'
 
 export const rootReducer = combineReducers({
   users,
-  history
+  articles
 })

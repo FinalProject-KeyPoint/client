@@ -23,7 +23,7 @@ export default function Main(props) {
             {/* <div className="topDiv" >
                 <img src={KeyPoint} alt="" style={{ backgroundColor: 'rgb(235, 235, 235, 0.04)', borderRadius: 15 }} />
             </div> */}
-            <Navbar handleClick={handleClick} />
+            {/* <Navbar handleClick={handleClick} /> */}
             <div className="induk" >
                 <div style={{ height: '60%', zIndex: -10, padding: 100 }}>
                     <Why />

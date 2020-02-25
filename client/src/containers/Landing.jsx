@@ -7,7 +7,6 @@ export default function Landing() {
 
   return (
     <>
-      
       <RegisterForm />
     </>
   )

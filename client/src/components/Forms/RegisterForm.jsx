@@ -13,11 +13,9 @@ function mapDispatchToProps(dispatch) {
 
 class RegForm extends React.Component {
   handleSubmit = e => {
-    console.log(this.props)
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
         this.props.register(values)
       }
     });
@@ -27,7 +25,7 @@ class RegForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form style={{marginTop: 100, position: 'fixed'}} onSubmit={this.handleSubmit} className="login-form">
+      <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
             rules: [{ required: true, message: 'Please input your username!' }],
