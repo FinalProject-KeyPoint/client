@@ -63,16 +63,19 @@ export function register(obj) {
   }
 }
 
-export function fetchArticles() {
+export function fetchArticles(dateString) {
   return function(dispatch, getState) {
     dispatch({
       type: ARTICLE_PROCESS_START
     })
     axios({
-      method: 'GET',
-      url: `${baseUrl}/articles`,
+      method: 'POST',
+      url: `${baseUrl}/articles/equalDate`,
       headers: {
         token: localStorage.getItem('token')
+      },
+      data: {
+        dateString
       }
     })
       .then(({ data }) => {

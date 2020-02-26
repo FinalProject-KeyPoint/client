@@ -26,6 +26,14 @@ export default function Navbar(props) {
         })
     }
 
+    const toTelegram = () => {
+        window.open('http://t.me/keypoint_hacktiv_bot', '_blank')
+    }
+
+    const toFirefox = () => {
+        window.open('https://addons.mozilla.org/en-US/firefox/', '_blank')
+    }
+
     return (
         <div className="navbar" >
             <div className="logoNav" >
@@ -40,11 +48,11 @@ export default function Navbar(props) {
                 </Link>
                 <Popover className="popNav" trigger="click" placement="bottomRight" content={
                     <div className="navPopContent" style={{ width: 300, display: 'flex', justifyContent: 'space-between' }} >
-                        <span><i className="fa fa-firefox"></i> Firefox</span> |
-                        <span><TelegramIcon>telegram</TelegramIcon>Telegram</span>
+                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> Firefox</span> |
+                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon>Telegram</span>
                     </div>
                 }>
-                    <Button type='link' className="btnNav" > Download </Button>
+                    <Button type='link' className="btnNav" > Find Us </Button>
                 </Popover>
                 
                 {

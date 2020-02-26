@@ -18,7 +18,6 @@ export default function HistoryList(props) {
     return (
       article._id
       ? <div>
-          <p>{article.createdAt}</p>
           <p onClick={() => redirect(article.url)}>{article.title}</p>
           <ul>{article.keyPoint.map(point => {
             return <li>{point}</li>
@@ -30,16 +29,16 @@ export default function HistoryList(props) {
   }
 
   const renderList = (() => {
+    // console.log(props.articles)
     return props.articles.map(article => {
       return <Timeline.Item onClick={() => changeDetail(article)} style={{ width: '100%' }} article={article} key={article._id}>
-                {article.url} - {article.createdAt}
+                {article.title}
               </Timeline.Item>
     })
   })
 
   return (
     <div style={{ marginTop: 50 }}>
-      {/* search box for date */}
       <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
         <Timeline mode="right" style={{ width: '50%', display:'flex', alignItems:'flex-start', flexDirection: 'column' }}>
           {renderList()}

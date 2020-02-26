@@ -37,7 +37,7 @@ export default function Meet(props) {
                     <TeamDiv
                         foto={markus}
                         nama={"Markus Antoni Suwignyo"}
-                        job={'as Backend Developer'}
+                        job={'as Full-stack Developer'}
                         quote={"be the best"}
                         quoteBy={'~Markus'}
                         className="insideTeamDiv"
@@ -46,7 +46,7 @@ export default function Meet(props) {
                     <TeamDiv
                         foto={alvina}
                         nama={"Alvina"}
-                        job={'as Backend Developer'}
+                        job={'as Frontend Developer'}
                         quote={"Let the stars shining for us"}
                         quoteBy={'~Tray'}
                         className="insideTeamDiv"
@@ -54,7 +54,7 @@ export default function Meet(props) {
                     <TeamDiv
                         foto={kevin}
                         nama={"Kevin Wilson"}
-                        job={'as Backend Developer'}
+                        job={'as Frontend Developer'}
                         quote={"If one takes care of the means, the end will take care of itself."}
                         quoteBy={'~Gandhi'}
                         className="insideTeamDiv"
