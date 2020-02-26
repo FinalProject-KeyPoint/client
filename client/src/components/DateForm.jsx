@@ -1,6 +1,7 @@
 import React from 'react'
 import { DatePicker } from 'antd';
 import moment from 'moment';
+import '../style/dashboard.css'
 
 class DateForm extends React.Component {
 
@@ -13,13 +14,13 @@ class DateForm extends React.Component {
   }
 
   handleChange = (date, dateString) => {
-    console.log(date, dateString);
+    // console.log(date, dateString);
     this.props.filterArticles(dateString)
   }
 
   render() {
     return (
-      <div>
+      <div className="dateForm">
         <DatePicker
           format="YYYY-MM-DD"
           size={'large'}

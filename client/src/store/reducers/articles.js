@@ -26,6 +26,7 @@ export default function articlesReducer(state = initialState, action) {
     case ARTICLE_PROCESS_FAILURE:
       return {
         ...state,
+        articles: [],
         isLoading: false,
         error: action.payload
       }

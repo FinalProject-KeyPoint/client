@@ -14,7 +14,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     dispatch(fetchArticles(date))
-  }, [date])
+  }, [date, dispatch])
 
   const handleDelete = (id) => {
     dispatch(deleteArticle(id))
@@ -25,11 +25,12 @@ export default function Dashboard() {
   }
   
   return (
-    <>
-      <DateForm filterArticles={handleFilter}/>
-      <p>{moment(date).format("MMM Do YYYY")}</p>
+    <div className="dashboardContainer">
+      <p className="historyText">Check your reading history</p>
+      <DateForm filterArticles={handleFilter} />
+      <p className="dateText">{moment(date).format("MMM Do YYYY")}</p>
       <HistoryList articles={localArticles} deleteArticle={handleDelete} />      
-    </>
+    </div>
   )
 
 }
