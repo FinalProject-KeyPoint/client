@@ -40,7 +40,12 @@ export default function Main(props) {
             <Meet />
             <div style={{ width: '100%', height: 30, backgroundColor: 'black', textAlign: 'center' }} >
                 <span style={{ color: 'white', textAlign: 'center' }} >&copy; 2020 Keypoint </span> &nbsp;&nbsp;&nbsp;
-                <span style={{ color: 'white', textAlign: 'center' }} > <i className="fa fa-github"></i> Github Link</span>
+                <span style={{ color: 'white', textAlign: 'center' }} >
+                    <i className="fa fa-github"></i>
+                    <a style={{ color: 'white' }} rel="noopener noreferrer" href="https://github.com/FinalProject-KeyPoint" target="_blank">
+                        Github Link
+                    </a>
+                </span>
             </div>
         </>
     )
