@@ -19,49 +19,70 @@ export default function TopPreset(props) {
             <Button
                 variant="outline-dark" className={props.active === 'Cnn' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
-                onClick={() => props.setActive('Cnn')}
+                onClick={() => {
+                    props.setActive('Cnn')
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Cnn} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Detik' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
-                onClick={() => props.setActive('Detik')}
+                onClick={() => {
+                    props.setActive('Detik')
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Detik} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Kompas' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
-                onClick={() => props.setActive('Kompas')}
+                onClick={() => {
+                    props.setActive('Kompas')
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Kompas} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Liputan' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
-                onClick={() => props.setActive("Liputan")}
+                onClick={() => {
+                    props.setActive("Liputan")
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Liputan} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Okezone' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
-                onClick={() => props.setActive('Okezone')}
+                onClick={() => {
+                    props.setActive('Okezone')
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Okezone} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Tempo' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100, marginTop: 50 }}
-                onClick={() => props.setActive("Tempo")}
+                onClick={() => {
+                    props.setActive("Tempo")
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Tempo} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
                 variant="outline-dark" className={props.active === 'Tribun' ? "active" : 'logoImageButton'}
                 style={{ width: 130, height: 100 }}
-                onClick={() => props.setActive('Tribun')}
+                onClick={() => {
+                    props.setActive('Tribun')
+                    props.setShowOrigin(false)
+                }}
             >
                 <Image src={Tribun} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
