@@ -28,10 +28,10 @@ export function login(obj) {
           payload: data.token
         })
       })
-      .catch(err => {
+      .catch(({ response }) => {
         dispatch({
           type: LOGIN_FAILURE,
-          payload: err.message
+          payload: response.data.message
         })
       })
   }
@@ -54,10 +54,10 @@ export function register(obj) {
           payload: data.token
         })
       })
-      .catch(err => {
+      .catch(({ response }) => {
         dispatch({
           type: LOGIN_FAILURE,
-          payload: err.message
+          payload: response.data.message
         })
       })
   }
@@ -81,10 +81,10 @@ export function fetchArticles() {
           payload: data
         })
       })
-      .catch(err => {
+      .catch(({ response }) => {
         dispatch({
           type: ARTICLE_PROCESS_FAILURE,
-          payload: err.message
+          payload: response.data.message
         })
       })
   }
@@ -97,17 +97,21 @@ export function deleteArticle(id) {
     })
     axios({
       method: 'DELETE',
-      url: `${baseUrl}/articles/${id}`
+      url: `${baseUrl}/articles/${id}`,
+      headers: {
+        token: localStorage.getItem('token')
+      }
     })
       .then(() => {
         return dispatch({
-          type: DELETE_ARTICLE_SUCCESS
+          type: DELETE_ARTICLE_SUCCESS,
+          payload: id
         })
       })
-      .catch(err => {
+      .catch(({ response }) => {
         dispatch({
           type: ARTICLE_PROCESS_FAILURE,
-          payload: err.message
+          payload: response.data.message
         })
       })
   }

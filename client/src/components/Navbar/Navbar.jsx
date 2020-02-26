@@ -20,8 +20,6 @@ export default function Navbar(props) {
     //     // window.scroll(0, 600)
     // }
 
-    console.log(isLoggedIn)
-
     const logout = () => {
         dispatch({
             type: LOGOUT
@@ -46,7 +44,7 @@ export default function Navbar(props) {
                         <span><TelegramIcon>telegram</TelegramIcon>Telegram</span>
                     </div>
                 }>
-                    <Button type='link' className="btnNav" > Find Us </Button>
+                    <Button type='link' className="btnNav" > Download </Button>
                 </Popover>
                 
                 {

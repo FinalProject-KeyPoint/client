@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import { Form, Icon, Input, Button } from 'antd';
 import { login } from '../../store/actions'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function hasErrors(fieldsError) {
   return Object.keys(fieldsError).some(field => fieldsError[field]);
@@ -68,6 +69,9 @@ class HorizontalLoginForm extends React.Component {
           <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}>
             Sign In
           </Button>
+          <Link to={'/register'}>
+            <p>or register</p>  
+          </Link>
         </Form.Item>
       </Form>
     );

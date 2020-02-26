@@ -36,8 +36,15 @@ export default function articlesReducer(state = initialState, action) {
         articles: [...action.payload]
       }
     case DELETE_ARTICLE_SUCCESS:
+      let arr = []
+      state.articles.forEach(article => {
+        if (String(article._id) !== String(action.payload)) {
+          arr.push(article)
+        }
+      })
       return {
         ...state,
+        articles: arr,
         isLoading: false,
         success: 'Article successfully deleted'
       }
