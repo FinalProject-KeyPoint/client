@@ -24,7 +24,7 @@ export default function Meet(props) {
     return (
         <div style={{ width: '100%' }}>
             <div style={{ objectFit: 'contain', backgroundColor: '#fefefa', padding: 10 }} >
-                <h1 style={{ textAlign: 'center', marginTop: 20, textDecoration: 'underline' }} >Teams</h1>
+                <h1 style={{ textAlign: 'center', marginTop: 20, textDecoration: 'underline' }} >Team Members</h1>
                 <div className="meetDiv" >
                     <TeamDiv
                         foto={jap}

@@ -21,7 +21,7 @@ export default function Why(props) {
                 </div>
                 <div className="bigMargin" >
                     <div className="goMargin">
-                        <h6 className="textCenter whyPoint" >Chrome extension</h6>
+                        <h6 className="textCenter whyPoint" >Firefox add-ons</h6>
                         <p className="textCenter textHilang" >Use KeyPoint directly on the site</p>
                     </div>
                     <div className="goMargin">

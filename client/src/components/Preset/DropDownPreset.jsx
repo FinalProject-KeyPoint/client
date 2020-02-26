@@ -27,21 +27,23 @@ export default function DropDownPreset(props) {
     );
 
     return (
-        <Dropdown
-            trigger={['click']}
-            overlay={menu}
-            onVisibleChange={handleVisibleChange}
-            visible={visible}
-        >
-            <div style={{ width: '90%', backgroundColor: 'white', height: 30, whiteSpace: 'nowrap', overflowX: 'auto' }} >
-                <span
-                    className="ant-dropdown-link"
-                    onClick={e => e.preventDefault()}
-                    style={{ fontSize: '1.3em', color: 'royalblue', textAlign: 'center' }}
-                >
-                    <Icon type="down" /> {props.showData.title} <Icon type="down" />
-                </span>
-            </div>
-        </Dropdown>
+        <div style={{ ...props.style }} >
+            <Dropdown
+                trigger={['click']}
+                overlay={menu}
+                onVisibleChange={handleVisibleChange}
+                visible={visible}
+            >
+                <div className="bungkusDropDown" >
+                    <span
+                        className="ant-dropdown-link"
+                        onClick={e => e.preventDefault()}
+                        style={{ fontSize: '1.3em', color: 'royalblue', textAlign: 'center' }}
+                    >
+                        <Icon type="down" /> {props.showData.title} <Icon type="down" />
+                    </span>
+                </div>
+            </Dropdown>
+        </div>
     )
 }
