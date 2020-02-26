@@ -5,8 +5,7 @@ const source = {
         "original": [
             `Liputan6.com, Jakarta - Anggota Dewan Pengawas Komisi Pemberantasan Korupsi (Dewas KPK) Artidjo Alkostar merespons permintaan anggota Komisi III DPR Fraksi PDIP Masinton Pasaribu. Masinton meminta dewas mengaudit internal KPK atas penghentian penyelidikan 36 kasus dugaan korupsi."`,
             `Menurut Artidjo yang memiliki untuk mengaudit adalah Ketua Dewas KPK Tumpak Panggabean."`,
-            `"Itu saya kira ranahnya pak ketua ya. Pak Tumpak ya," ujar Artidjo di kantornya, Gedung ACLC, 
-                                        Rasuna Said, Jakarta Selatan, Selasa (25/2/2020)."`,
+            `"Itu saya kira ranahnya pak ketua ya. Pak Tumpak ya," ujar Artidjo di kantornya, Gedung ACLC, Rasuna Said, Jakarta Selatan, Selasa (25/2/2020)."`,
             `Menurut Artdijo, setiap anggota dewas sudah memiliki fungsi dan wewenangnya masing-masing. Artidjo menilai, dirinya tidak memiliki kewenangan untuk menjawab permintaan Masinton."`,
             `"Kita ini lima orang punya tugas sendiri-sendiri. Pak Harjono tentang kode etik, Pak Syamsuddin Haris tentang evaluasi, Bu Albertina ada, itu bukan (tugas) saya itu," jelas Artidjo."`,
             `Sebelumnya, Masinton Pasaribu meminta dewas KPK untuk mengaudit atas penghentian 36 kasus dugaan korupsi di ranah penyelidikan."`,
@@ -18,8 +17,7 @@ const source = {
             `"Itu saya kira ranahnya pak ketua ya. Pak Tumpak ya," ujar Artidjo di kantornya, Gedung ACLC, Rasuna Said, Jakarta Selatan, Selasa (25/2/2020).`,
             `Menurut Artdijo, setiap anggota dewas sudah memiliki fungsi dan wewenangnya masing-masing. Artidjo menilai, dirinya tidak memiliki kewenangan untuk menjawab permintaan Masinton.`,
             `"Kita ini lima orang punya tugas sendiri-sendiri. Pak Harjono tentang kode etik, Pak Syamsuddin Haris tentang evaluasi, Bu Albertina ada, itu bukan (tugas) saya itu," jelas Artidjo.`,
-            `"Dewas itu kan bagian dari KPK. Jadi menurut saya dengan adanya penghentian penyelidikan 36 kasus di KPK itu ditindaklanjuti dengan audit terhadap manajemen penanganan perkara. Sehingga itu bisa lebih akuntabel nanti penanganan perkara yang ditangani oleh KPK," ucap Masinton di Jakarta, Minggu, 23 Februari 2020.,
-                                        Sebelumnya, KPK telah menghentikan penyelidikan terhadap 36 kasus dugaan korupsi di tahap penyelidikan.`,
+            `"Dewas itu kan bagian dari KPK. Jadi menurut saya dengan adanya penghentian penyelidikan 36 kasus di KPK itu ditindaklanjuti dengan audit terhadap manajemen penanganan perkara. Sehingga itu bisa lebih akuntabel nanti penanganan perkara yang ditangani oleh KPK," ucap Masinton di Jakarta, Minggu, 23 Februari 2020., Sebelumnya, KPK telah menghentikan penyelidikan terhadap 36 kasus dugaan korupsi di tahap penyelidikan.`,
             `Dalihnya, untuk memberikan kepastian hukum, keterbukaan dan akuntabilitas pada publik.`
         ],
         "keyPoint": [
@@ -71,7 +69,8 @@ const source = {
             "\"Kita maklumi karena ini bukan sesuatu yang mudah,\" lanjut dia."
         ],
         "redacted": [
-            '- Juru Bicara Presiden  Fadjroel Rachman meminta WNI di Kapal  Diamond Princess yang menjadi epicentrum baru penyebaran  virus corona bersabar. Ia memastikan pemerintah akan mengevakuasi mereka sesegera mungkin.', '"Kami berpesan, agar sedikit bersabar karena pemerintah akan menjemput segera. Keputusan politik sudah diambil oleh Presiden Joko Widodo," kata Fadjroel melalui keterangan tertulis, Selasa (25/2/2020).',
+            '- Juru Bicara Presiden  Fadjroel Rachman meminta WNI di Kapal  Diamond Princess yang menjadi epicentrum baru penyebaran  virus corona bersabar. Ia memastikan pemerintah akan mengevakuasi mereka sesegera mungkin.',
+            '"Kami berpesan, agar sedikit bersabar karena pemerintah akan menjemput segera. Keputusan politik sudah diambil oleh Presiden Joko Widodo," kata Fadjroel melalui keterangan tertulis, Selasa (25/2/2020).',
             'Ia menambahkan pemerintah tengah menyiapkan langkah-langkah teknisnya, sebagaimana disampaikan Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan (Menko PMK) Muhadjir Effendy dan Menteri Kesehatan Terawan Agus Putranto.',
             'Fadjroel juga menambahkan pihak KBRI Tokyo dan Kementerian Luar Negeri sudah berkomunikasi dengan WNI di Kapal Diamond Princess.Ia juga menyatakan pemerintah telah menyediakan logistik bagi mereka.',
             '"Perlakuan sama terhadap WNI yang terdampak virus corona juga berlaku baik yang di Provinsi Hubei, kapal Diamond Princess, maupun yang berada kapal World Dream, " kata Fadjroel.',

@@ -35,10 +35,11 @@ export default function BoxPreset(props) {
                     <span className="showShow" >{props.showOrigin ? "Summary" : "Original"}</span>
                 </Button>
             </div>
+            <span style={{ textAlign: 'center', marginTop: 10, marginBottom: -20, color: 'gray' }} >{!props.showOrigin ? "Showing Summary" : "Showing Original"}</span>
             <div className="textAreaHolder" >
                 <textarea
                     className="textClassArea"
-                    disabled value={props.showOrigin ? props.showData.real : props.showData.filtered} ></textarea>
+                    disabled value={props.showOrigin ? props.showData.real.join('\n\n') : props.showData.filtered.join('\n\n')} ></textarea>
                 <div className="textDivArea" >
                     {/* <div> */}
                     <h4>Keypoint :</h4>
