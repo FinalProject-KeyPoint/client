@@ -5,6 +5,7 @@ import BoxPreset from './BoxPreset';
 import {
     Cnn, Tribun, Tempo, Kompas, Liputan, Okezone, Detik
 } from './preset.js'
+import DropDownPreset from './DropDownPreset';
 
 export default function DemoPreset(props) {
     const [active, setActive] = useState('Liputan')
@@ -22,6 +23,9 @@ export default function DemoPreset(props) {
             <div style={{ padding: 25 }} >
                 <div style={{ width: '100%', padding: 15, margin: 20 }} >
                     <TopPreset setActive={setActive} active={active} setShowOrigin={setShowOrigin} />
+                    <div className="dropDownLink" >
+                        <DropDownPreset showData={showData} setActive={setActive} active={active} setShowOrigin={setShowOrigin} />
+                    </div>
                 </div>
                 <BoxPreset showData={showData} showOrigin={showOrigin} setShowOrigin={setShowOrigin} />
             </div>

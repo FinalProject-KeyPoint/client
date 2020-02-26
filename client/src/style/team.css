@@ -22,6 +22,35 @@
     padding: 0px 150px
 }
 
-/* @media (max-width: 1285px) {
-    .teamDiv {}
-} */
+.insideTeamDiv{
+    /* background-color: rebeccapurple !important; */
+}
+
+@media (max-width: 1245px) {
+    .insideTeamDiv {
+        width: 70% !important;
+    }
+}
+@media (max-width: 900px) {
+    .insideTeamDiv {
+        width: 90% !important;
+    }
+}
+@media (max-width: 650px) {
+    .insideTeamDiv {
+        width: 100% !important;
+    }
+    .meetDiv {
+        padding: 0 30px !important;
+        margin-bottom: 10px !important;
+    }
+}
+@media (max-width: 365px) {
+    .meetDiv {
+        padding: 0 !important;
+    }
+    .showShow {
+        padding: 0 !important;
+        margin-left: -13px !important;
+    }
+}

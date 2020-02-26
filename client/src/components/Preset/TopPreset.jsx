@@ -8,7 +8,7 @@ import Tribun from '../../assets/web/tribunnews_v2.png';
 import Liputan from '../../assets/web/liputan6.png';
 import Okezone from '../../assets/web/okezone.webp';
 import Tempo from '../../assets/web/tempo.png';
-// import { Radio } from 'antd';
+import '../../style/presetNew.css'
 import '../../style/demoPreset.css';
 
 export default function TopPreset(props) {
@@ -17,8 +17,7 @@ export default function TopPreset(props) {
     return (
         <div style={{ display: 'flex', justifyContent: 'space-around' }} >
             <Button
-                variant="outline-dark" className={props.active === 'Cnn' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100 }}
+                variant="outline-dark" className={props.active === 'Cnn' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive('Cnn')
                     props.setShowOrigin(false)
@@ -27,8 +26,7 @@ export default function TopPreset(props) {
                 <Image src={Cnn} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Detik' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100, marginTop: 50 }}
+                variant="outline-dark" className={props.active === 'Detik' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive('Detik')
                     props.setShowOrigin(false)
@@ -37,8 +35,7 @@ export default function TopPreset(props) {
                 <Image src={Detik} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Kompas' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100 }}
+                variant="outline-dark" className={props.active === 'Kompas' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive('Kompas')
                     props.setShowOrigin(false)
@@ -47,8 +44,7 @@ export default function TopPreset(props) {
                 <Image src={Kompas} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Liputan' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100, marginTop: 50 }}
+                variant="outline-dark" className={props.active === 'Liputan' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive("Liputan")
                     props.setShowOrigin(false)
@@ -57,8 +53,7 @@ export default function TopPreset(props) {
                 <Image src={Liputan} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Okezone' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100 }}
+                variant="outline-dark" className={props.active === 'Okezone' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive('Okezone')
                     props.setShowOrigin(false)
@@ -67,8 +62,7 @@ export default function TopPreset(props) {
                 <Image src={Okezone} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Tempo' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100, marginTop: 50 }}
+                variant="outline-dark" className={props.active === 'Tempo' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive("Tempo")
                     props.setShowOrigin(false)
@@ -77,8 +71,7 @@ export default function TopPreset(props) {
                 <Image src={Tempo} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </Button>
             <Button
-                variant="outline-dark" className={props.active === 'Tribun' ? "active" : 'logoImageButton'}
-                style={{ width: 130, height: 100 }}
+                variant="outline-dark" className={props.active === 'Tribun' ? "active theLogo" : 'logoImageButton theLogo'}
                 onClick={() => {
                     props.setActive('Tribun')
                     props.setShowOrigin(false)

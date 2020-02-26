@@ -9,7 +9,7 @@ export default function TeamDiv(props) {
     return (
         <div
             style={{ ...props.style }}
-            className="teamDiv"
+            className="teamDiv insideTeamDiv"
         >
             <div className='teamSecondDiv' >
                 <Image
