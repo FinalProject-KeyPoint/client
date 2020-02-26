@@ -1,0 +1,95 @@
+.theLogo {
+    width: 130px;
+    height: 100px;
+}
+
+.theLogo:nth-child(even){
+    margin-top: 50px;
+}
+
+.boxPresetDiv {
+    white-space: nowrap;
+    user-select: none;
+    width: 90%;
+    height: 80px;
+    background-color: white;
+    overflow-y: hidden;
+    font-size: 1.2rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 20px;
+}
+
+.textClassArea { 
+    height: 400px;
+    width: 70%;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    overflow: auto;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    resize: none;
+    user-select: none;
+    font-size: 1.1rem 
+}
+
+.textAreaHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-family: 'Roboto';
+}
+
+.textDivArea { 
+    width: 30%;
+    padding: 25px;
+    height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background-color: #fffdf9;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+@media (max-width: 850px) {
+    .theLogo {
+        display: none;
+    }
+    .dropDownLink {
+        display: block;
+    }
+    .showOriginButton{
+        width: 20% !important;
+    }
+    .showDataTitle{
+        overflow-y: auto !important;
+        width: 90% !important;
+        font-size: 1.4rem !important;
+    }
+    .textClassArea {
+        border-top-left-radius: 15px !important;
+        border-top-right-radius: 15px !important;
+        border-bottom-left-radius: 0px !important;
+        width: 100% !important;
+    }
+    .textDivArea{
+        border-bottom-left-radius: 15px !important;
+        /* border-bottom-right-radius: 15px !important; */
+        border-top-right-radius: 0px !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+        border-top: none !important;
+        border-left: 1px solid gray;
+    }
+    .textAreaHolder {
+        flex-direction: column;
+    }
+    .presetDiv {
+        height: 1030px !important;
+    }
+}
