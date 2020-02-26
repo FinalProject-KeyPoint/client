@@ -4,7 +4,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default function BoxPreset(props) {
     const [copied, setCopied] = useState(false)
-    const [showOrigin, setShowOrigin] = useState(false)
 
     return (
         <div style={{ width: '100%', height: 485, display: 'flex', marginTop: 20, flexDirection: 'column' }} >
@@ -30,14 +29,24 @@ export default function BoxPreset(props) {
                 <Button
                     type="ghost" icon="solution" style={{ height: '100%', width: '10%', borderTopRightRadius: 20, borderBottomRightRadius: 20, backgroundColor: 'lightgreen', color: 'black' }}
                     className="showOriginButton"
-                    onClick={() => setShowOrigin(!showOrigin)}
+                    onClick={() => props.setShowOrigin(!props.showOrigin)}
                 >
-                    {showOrigin ? "Show Summary" : "Show Original"}
+                    {props.showOrigin ? "Show Summary" : "Show Original"}
                 </Button>
             </div>
-            <textarea
-                style={{ height: 400, width: '100%', backgroundColor: 'white', marginTop: 20, padding: 20, overflow: 'auto', borderRadius: 15, resize: 'none', userSelect: 'none', fontFamily: 'Hind Siliguri', fontSize: '1.1rem' }}
-                disabled value={showOrigin ? props.showData.real : props.showData.filtered} ></textarea>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', fontFamily: 'Hind Siliguri' }} >
+                <textarea
+                    style={{ height: 400, width: '70%', backgroundColor: 'white', marginTop: 20, padding: 20, overflow: 'auto', borderTopLeftRadius: 15, borderBottomLeftRadius: 15, resize: 'none', userSelect: 'none', fontSize: '1.1rem' }}
+                    disabled value={props.showOrigin ? props.showData.real : props.showData.filtered} ></textarea>
+                <div style={{ width: '30%', padding: 25, height: 400, overflowY: 'auto', marginTop: 20, backgroundColor: '#fffdf9', borderTopRightRadius: 15, borderBottomRightRadius: 15, borderRight: '1px solid gray', borderTop: '1px solid gray', borderBottom: '1px solid gray' }} >
+                    <div>
+                        <h4>Keypoint :</h4>
+                        <ul style={{ listStylePosition: 'inside', fontSize: '1rem' }} >
+                            {props.showData.keyPoint.map(kalimat => <li> {kalimat} </li>)}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

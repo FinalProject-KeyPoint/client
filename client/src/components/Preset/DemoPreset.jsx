@@ -9,6 +9,8 @@ import {
 export default function DemoPreset(props) {
     const [active, setActive] = useState('Liputan')
     const [showData, setShowData] = useState(Liputan)
+    const [showOrigin, setShowOrigin] = useState(false)
+
 
     useEffect(() => {
         setShowData(switchingData(active))
@@ -19,9 +21,9 @@ export default function DemoPreset(props) {
         <div className="DemoPreset" >
             <div style={{ padding: 25 }} >
                 <div style={{ width: '100%', padding: 15, margin: 20 }} >
-                    <TopPreset setActive={setActive} active={active} />
+                    <TopPreset setActive={setActive} active={active} setShowOrigin={setShowOrigin} />
                 </div>
-                <BoxPreset showData={showData} />
+                <BoxPreset showData={showData} showOrigin={showOrigin} setShowOrigin={setShowOrigin} />
             </div>
         </div>
     )
