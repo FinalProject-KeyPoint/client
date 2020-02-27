@@ -57,11 +57,11 @@ export default function HistoryList(props) {
               cancelText="No"
               style={{position: 'relative', width: '90%'}}
             >
-            <Button style={{ width: '90%', position:'absolute', backgroundColor: 'coral', color: 'snow', margin: 'auto' }} block>Delete</Button>
+            <Button style={{ width: '90%', position:'absolute', backgroundColor: 'coral', color: 'snow', margin: 'auto', borderBottomRightRadius: '5px', borderBottomLeftRadius: '5px' }} block>Delete</Button>
           </Popconfirm>
         </div>
       : <div style={{ margin: 'auto', width: '400px', position: 'sticky', top: '20%' }}>
-          <img src={image} style={{ width: '100%', height: 'auto' }}/>
+          <img src={image} style={{ width: '100%', height: 'auto', borderRadius: '5px' }}/>
           <p style={{ fontSize: 18, textAlign: 'center', marginTop: 5 }}>Please select article to display</p>
         </div>
     )
