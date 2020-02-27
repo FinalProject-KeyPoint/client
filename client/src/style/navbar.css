@@ -13,10 +13,17 @@
     border-bottom: 1px solid burlywood;
 }
 
-.right-bar {
+.right-bar-lg {
     display: flex;
     justify-content: space-between;
     width: 240px;
+    margin-right: 30px;
+}
+
+.right-bar-sm {
+    display: flex;
+    justify-content: space-between;
+    width: 160px;
     margin-right: 30px;
 }
 

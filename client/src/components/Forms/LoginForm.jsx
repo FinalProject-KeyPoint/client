@@ -49,6 +49,7 @@ class HorizontalLoginForm extends React.Component {
           })(
             <Input
               prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
+              type="text"
               placeholder="Email"
             />,
           )}
@@ -65,12 +66,14 @@ class HorizontalLoginForm extends React.Component {
           )}
         </Form.Item>
         <Form.Item>
-          <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}>
+          <Button style={{ backgroundColor: 'coral', color: 'snow' }} 
+            type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}
+          >
             Sign In
           </Button>
           &nbsp; 
           <Link to={'/register'}>
-            <p>or register</p>  
+            <p style={{ color: 'coral' }}>or register</p>  
           </Link>
         </Form.Item>
       </Form>

@@ -42,31 +42,40 @@ export default function Navbar(props) {
                     <img src={KeyPoint} onClick={props.handleClick} alt="" />
                 </Link>
             </div>
-            <div className="right-bar" >
-                <Link to={'/dashboard'}>
-                    <Button type='link' className="btnNav" > Dashboard </Button>
-                </Link>
-                <Popover className="popNav" trigger="click" placement="bottomRight" content={
-                    <div className="navPopContent" style={{ width: 180, display: 'flex', justifyContent: 'space-between' }} >
-                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> &nbsp; Firefox</span> |
-                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon> Telegram</span>
-                    </div>
-                }>
-                    <Button type='link' className="btnNav" > Find Us </Button>
-                </Popover>
-                
                 {
-                    !isLoggedIn
-                        ?   <Popover className="popNav" trigger="click" placement="bottomRight" content={
-                                <div className="navPopContent" style={{ width: 220 }} >
-                                    <LoginForm />
-                                </div>
-                            }>
+                    isLoggedIn
+                        ?   <div className="right-bar-lg" >
+                                <Link to={'/dashboard'}>
+                                    <Button type='link' className="btnNav" > Dashboard </Button>
+                                </Link>
+                                <Popover className="popNav" trigger="click" placement="bottomRight" content={
+                                    <div className="navPopContent" style={{ width: 180, display: 'flex', justifyContent: 'space-between' }} >
+                                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> &nbsp; Firefox</span> |
+                                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon> Telegram</span>
+                                    </div>
+                                }>
+                                    <Button type='link' className="btnNav" > Find Us </Button>
+                                </Popover>
+                                <Button type='link' className="btnNav" onClick={logout}> Sign Out </Button>
+                            </div>          
+                        : <div className="right-bar-sm" >  
+                                <Popover className="popNav" trigger="click" placement="bottomRight" content={
+                                    <div className="navPopContent" style={{ width: 180, display: 'flex', justifyContent: 'space-between' }} >
+                                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> &nbsp; Firefox</span> |
+                                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon> Telegram</span>
+                                    </div>
+                                }>
+                                    <Button type='link' className="btnNav" > Find Us </Button>
+                                </Popover>
+                                <Popover className="popNav" trigger="click" placement="bottomRight" content={
+                                    <div className="navPopContent" style={{ width: 220 }} >
+                                        <LoginForm />
+                                    </div>
+                                }>
                                 <Button type='link' className="btnNav" > Sign In </Button>
-                            </Popover>
-                        :   <Button type='link' className="btnNav" onClick={logout}> Sign Out </Button>
+                                    </Popover>
+                        </div>
                 }
-            </div>
         </div>
     )
 }

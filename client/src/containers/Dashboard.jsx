@@ -26,7 +26,7 @@ export default function Dashboard() {
   
   return (
     <div className="dashboardContainer">
-      <p className="historyText">Check your reading history</p>
+      <p className="historyText">DAILY READING HISTORY</p>
       <DateForm filterArticles={handleFilter} />
       <HistoryList articles={localArticles} deleteArticle={handleDelete} date={date} />      
     </div>

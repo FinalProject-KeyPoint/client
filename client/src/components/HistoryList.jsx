@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import '../style/dashboard.css'
-import { Empty, Button, Affix } from 'antd';
+import { Empty, Button, Popconfirm, message } from 'antd';
 import moment from 'moment'
 import { useSelector } from 'react-redux'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import image from '../assets/notifications/select.png'
 
 export default function HistoryList(props) {
 
@@ -28,22 +29,6 @@ export default function HistoryList(props) {
     setArticle({})
   }
 
-  const displayDetail = () => {
-    return (
-      article._id
-      ? <div className="articleDetail" style={{ position: 'sticky', top: '1%' }}>
-          <Button onClick={() => redirect(article.url)} type="link" style={{ margin: 'auto' }} block>
-            {article.title}
-          </Button>
-          <ul style={{ width: '90%', margin: 'auto' }}>{article.keyPoint.map(point => {
-            return <li style={{ fontSize: 14, margin: '2 0' }}>{point}</li>
-          })}</ul>
-          <Button style={{ backgroundColor: 'coral', color: 'snow', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px', margin: 'auto' }} block onClick={() => onDelete(article._id)}>Delete</Button>
-        </div>
-      : <p style={{ margin: 'auto', width: '300px', fontSize: 18, position: 'sticky', top: '30%' }}>Please select article to display</p>
-    )
-  }
-
   const getTitle = (title) => {
     return (
       title.length > 100
@@ -52,11 +37,41 @@ export default function HistoryList(props) {
     )
   }
 
+  const displayDetail = () => {
+    return (
+      article._id
+      ? <div style={{ position: 'sticky', top: '1%', maxHeight: '90vh', width: '100%' }}><div className="articleDetail pb-3" style={{ position: 'sticky', top: '1%', maxHeight: '90vh', overflow: 'auto', width: '90%' }}>
+          <Button onClick={() => redirect(article.url)} type="link" style={{ margin: 'auto', whiteSpace: 'normal', height: '10%' }} className="my-3" >
+            {article.title}
+          </Button>
+          <div style={{maxHeight: '100%', overflow: 'auto'}} >
+          <ul style={{ width: '90%', margin: 'auto', height: '90%' }}>{article.keyPoint.map(point => {
+            return <li style={{ fontSize: 14, margin: '2 0' }}>{point}</li>
+          })}</ul>
+          </div>
+          </div>
+          <Popconfirm
+              title="Are you sure delete this article?"
+              onConfirm={() => onDelete(article._id)}
+              okText="Yes"
+              cancelText="No"
+              style={{position: 'relative', width: '90%'}}
+            >
+            <Button style={{ width: '90%', position:'absolute', backgroundColor: 'coral', color: 'snow', margin: 'auto' }} block>Delete</Button>
+          </Popconfirm>
+        </div>
+      : <div style={{ margin: 'auto', width: '400px', position: 'sticky', top: '20%' }}>
+          <img src={image} style={{ width: '100%', height: 'auto' }}/>
+          <p style={{ fontSize: 18, textAlign: 'center', marginTop: 5 }}>Please select article to display</p>
+        </div>
+    )
+  }
+
   const renderList = (() => {
     if (articles.length) {
       return props.articles.map(article => {
         return <VerticalTimelineElement
-                  contentStyle={{ background: 'lightsalmon', color: 'darkslategray', width: 200 }}
+                  contentStyle={{ marginLeft: 20, background: 'lightsalmon', color: 'darkslategray', width: 200 }}
                   contentArrowStyle={{ borderRight: '7px solid lightsalmon' }}
                   date={moment(article.createdAt).format('LT')}
                   iconStyle={{ background: 'lightsalmon', color: 'darkslategray' }}
@@ -72,7 +87,7 @@ export default function HistoryList(props) {
                 </VerticalTimelineElement>
       })
     } else {
-      return <Empty imageStyle={{ height: 250, width: 250 }} style={{ margin: 'auto' }} />
+      return <Empty imageStyle={{ height: 250, width: 250 }} description={false} style={{ margin: 'auto' }} />
     }
   })
 
@@ -80,7 +95,7 @@ export default function HistoryList(props) {
     <div className="historyList">
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
         <div style={{ margin: 'auto', width: '60%' }}>
-          <p style={{ fontWeight: 800, fontSize: '2rem', textAlign: 'center' }}>
+          <p style={{ fontWeight: 600, fontSize: '1rem', textAlign: 'center' }}>
             {moment(props.date).format("MMM Do YYYY")}
           </p>
           <VerticalTimeline style={{ }}>
@@ -93,5 +108,4 @@ export default function HistoryList(props) {
       </div>
     </div>
   )
-
 }

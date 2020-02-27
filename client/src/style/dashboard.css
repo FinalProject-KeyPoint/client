@@ -10,10 +10,11 @@
 }
 
 .historyText {
-  font-size: 1rem;
+  font-size: 2rem;
+  padding: 0px 10px;
   margin: auto;
   width: 40%;
-  padding: 10px;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -38,7 +39,7 @@
   width: 95%;
   background: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 .emptyPicture {
