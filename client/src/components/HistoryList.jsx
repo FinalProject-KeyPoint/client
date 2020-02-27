@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../style/dashboard.css'
-import { Timeline, Empty, Button } from 'antd';
+import { Empty, Button, Affix } from 'antd';
 import moment from 'moment'
 import { useSelector } from 'react-redux'
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 export default function HistoryList(props) {
 
@@ -29,16 +31,16 @@ export default function HistoryList(props) {
   const displayDetail = () => {
     return (
       article._id
-      ? <div className="articleDetail">
+      ? <div className="articleDetail" style={{ position: 'sticky', top: '1%' }}>
           <Button onClick={() => redirect(article.url)} type="link" style={{ margin: 'auto' }} block>
             {article.title}
           </Button>
-          <ol>{article.keyPoint.map(point => {
-            return <li>{point}</li>
-          })}</ol>
-          <Button type="danger" block onClick={() => onDelete(article._id)}>Delete</Button>
+          <ul style={{ width: '90%', margin: 'auto' }}>{article.keyPoint.map(point => {
+            return <li style={{ fontSize: 14, margin: '2 0' }}>{point}</li>
+          })}</ul>
+          <Button style={{ backgroundColor: 'coral', color: 'snow', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px', margin: 'auto' }} block onClick={() => onDelete(article._id)}>Delete</Button>
         </div>
-      : <p style={{ margin: 'auto', width: '300px', fontSize: 18 }}>Please select article to display</p>
+      : <p style={{ margin: 'auto', width: '300px', fontSize: 18, position: 'sticky', top: '30%' }}>Please select article to display</p>
     )
   }
 
@@ -53,9 +55,21 @@ export default function HistoryList(props) {
   const renderList = (() => {
     if (articles.length) {
       return props.articles.map(article => {
-        return <Timeline.Item onClick={() => changeDetail(article)} style={{ width: '100%', cursor: 'pointer' }} className="articleItem" article={article} key={article._id}>
-                  <p>{getTitle(article.title)} - <strong>{moment(article.createdAt).format('LT')}</strong></p>
-                </Timeline.Item>
+        return <VerticalTimelineElement
+                  contentStyle={{ background: 'lightsalmon', color: 'darkslategray', width: 200 }}
+                  contentArrowStyle={{ borderRight: '7px solid lightsalmon' }}
+                  date={moment(article.createdAt).format('LT')}
+                  iconStyle={{ background: 'lightsalmon', color: 'darkslategray' }}
+                  article={article} key={article._id}
+                  iconOnClick={() => changeDetail(article)}
+                >
+                  <p
+                    onClick={() => changeDetail(article)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    {getTitle(article.title)}
+                  </p>
+                </VerticalTimelineElement>
       })
     } else {
       return <Empty imageStyle={{ height: 250, width: 250 }} style={{ margin: 'auto' }} />
@@ -63,14 +77,19 @@ export default function HistoryList(props) {
   })
 
   return (
-    <div style={{ marginTop: 50 }} className="historyList">
-      <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>
-        <Timeline mode="right" style={{ width: '50%', display:'flex', alignItems:'flex-start', flexDirection: 'column' }} className="articlesList">
-          {renderList()}
-        </Timeline>
-        <div style={{ width: '50%', marginLeft: 15 }}>
-          {displayDetail()}
+    <div className="historyList">
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+        <div style={{ margin: 'auto', width: '60%' }}>
+          <p style={{ fontWeight: 800, fontSize: '2rem', textAlign: 'center' }}>
+            {moment(props.date).format("MMM Do YYYY")}
+          </p>
+          <VerticalTimeline style={{ }}>
+            {renderList()}
+          </VerticalTimeline>
         </div>
+          <div style={{ width: '40%' }}>
+            {displayDetail()}
+          </div>
       </div>
     </div>
   )

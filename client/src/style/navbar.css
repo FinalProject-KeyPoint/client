@@ -40,6 +40,11 @@
     cursor: pointer;
 }
 
+.navPopContent span:hover {
+    cursor: pointer;
+    color: dodgerblue;
+}
+
 .navPopContent span:first-child {
     display: flex;
     align-items: baseline;

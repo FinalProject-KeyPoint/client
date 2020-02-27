@@ -1,6 +1,5 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-// import './index.css';
 import { Form, Icon, Input, Button } from 'antd';
 import { login } from '../../store/actions'
 import { connect } from 'react-redux'
@@ -69,6 +68,7 @@ class HorizontalLoginForm extends React.Component {
           <Button type="primary" htmlType="submit" disabled={hasErrors(getFieldsError())}>
             Sign In
           </Button>
+          &nbsp; 
           <Link to={'/register'}>
             <p>or register</p>  
           </Link>

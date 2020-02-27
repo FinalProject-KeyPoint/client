@@ -47,9 +47,9 @@ export default function Navbar(props) {
                     <Button type='link' className="btnNav" > Dashboard </Button>
                 </Link>
                 <Popover className="popNav" trigger="click" placement="bottomRight" content={
-                    <div className="navPopContent" style={{ width: 300, display: 'flex', justifyContent: 'space-between' }} >
-                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> Firefox</span> |
-                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon>Telegram</span>
+                    <div className="navPopContent" style={{ width: 180, display: 'flex', justifyContent: 'space-between' }} >
+                        <span onClick={toFirefox}><i className="fa fa-firefox"></i> &nbsp; Firefox</span> |
+                        <span onClick={toTelegram}><TelegramIcon>telegram</TelegramIcon> Telegram</span>
                     </div>
                 }>
                     <Button type='link' className="btnNav" > Find Us </Button>
@@ -58,7 +58,7 @@ export default function Navbar(props) {
                 {
                     !isLoggedIn
                         ?   <Popover className="popNav" trigger="click" placement="bottomRight" content={
-                                <div className="navPopContent" style={{ width: 300, display: 'flex', justifyContent: 'space-between' }} >
+                                <div className="navPopContent" style={{ width: 220 }} >
                                     <LoginForm />
                                 </div>
                             }>
